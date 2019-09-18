@@ -49,6 +49,5 @@ def checkout(cart, coupons)
   applied_discount = apply_clearance(applied_coupons)
 
   total = applied_discount.reduce(0) {|acc, (key, value)| acc += value[:price] * value[:count]}
-  ternary operator
   total > 100? total * 0.9 : total 
 end
